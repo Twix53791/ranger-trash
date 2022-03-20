@@ -1,14 +1,14 @@
 # ranger-trash
-A very small tweak of the delete build-in function to get a better chance to recover a file deleted by mistake
+A very small tweak of the delete build-in function of ranger to get a better chance to recover a file deleted by mistake.
 
-This very small tweak for [ranger](https://ranger.github.io) file manager that modify the delete build-in function to move deleted files to the linux /tmp di>
+This very small tweak for [ranger](https://ranger.github.io) file manager modifies the delete build-in function to move deleted files to the linux /tmp directory instead of deleting them straightaway. It is not a real "trash" as the files will be deleted at the end of the session as the tmp directory content, but it is enough to avoid any mistake forcing us to look for the inodes... To avoid moving large files, a limit of 1 Mb is put, which can be easily modified of course, editing the file...
 
 ## Installation
 
 Just copy the actions.py file and overwrite the native one in /usr/lib/python3.10/site-packages/ranger/core
 It should take effect immediatly. In case it is not, restart the computer.
 
-Here is the mmodified delete function (only 5 lines of difference...) which calls now shutil.move instead of shutil.rmtree :
+Here is the modified delete function, which calls now shutil.move instead of shutil.rmtree :
 
 ```bash
     def delete(self, files=None):

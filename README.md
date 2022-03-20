@@ -10,7 +10,7 @@ It should take effect immediatly. In case it is not, restart the computer.
 
 Here is the modified delete function, which calls now shutil.move instead of shutil.rmtree :
 
-```bash
+```python
     def delete(self, files=None):
         # XXX: warn when deleting mount points/unseen marked files?
         # COMPAT: old command.py use fm.delete() without arguments

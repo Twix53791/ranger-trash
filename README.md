@@ -2,6 +2,7 @@
 A very small tweak of the delete build-in function of ranger to get a better chance to recover a file deleted by mistake.
 
 This very small tweak for [ranger](https://ranger.github.io) file manager modifies the delete build-in function to move deleted files to the linux /tmp directory instead of deleting them straightaway. It is not a real "trash" as the files will be deleted at the end of the session as the tmp directory content, but it is enough to avoid any mistake forcing us to look for the inodes... To avoid moving large files, a limit of 1 Mb is put, which can be easily modified of course, editing the file...
+Note than ranger have already a trash feature, which is a "real" trash. But I personally I don't like trash, quickly empeded with old files and using volume pointlessly.
 
 ## Installation
 

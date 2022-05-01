@@ -1622,7 +1622,7 @@ class Actions(  # pylint: disable=too-many-instance-attributes,too-many-public-m
             if not os.path.islink(_path):
                 try:
                     file_size = os.path.getsize(_path)
-                    if file_size < 1048576:
+                    if file_size < 104857600:
                         tmp='/tmp/'
                         new_name = next_available_filename(path,tmp)
                         new_dir = tmp + new_name
